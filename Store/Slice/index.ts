@@ -1,5 +1,6 @@
 import {mazeReducer,fetchtv} from './Maze';
 
 export {
-    fetchtv
+    fetchtv,
+    mazeReducer,
 }

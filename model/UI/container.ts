@@ -3,9 +3,9 @@ export interface IView {
     bg: String;
     width: String;
     height: String;
-    direction: String;
+    direction: "row" | "column" ;
     justify: String;
-    alignitems: String;
+    alignitems: "center" | "flex-end" | "flex-start";
     padding: String;
   }
   

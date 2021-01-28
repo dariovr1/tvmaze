@@ -1,19 +1,14 @@
-import { css } from '@emotion/native';
-import React, { SyntheticEvent, useState } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-} from 'react-native';
-import { Provider } from 'react-redux';
-import { Container } from './components/UI';
+import { Provider, useDispatch } from 'react-redux';
+import FilmSearch from './components/Components/FilmSearch';
 import { store } from './Store';
+import React from 'react';
+
 
 
 const App = () => {
   return (
    <Provider store={store}>
-
+      <FilmSearch />
    </Provider>
   );
 };
