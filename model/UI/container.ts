@@ -7,5 +7,6 @@ export interface IView {
     justify: String;
     alignitems: "center" | "flex-end" | "flex-start";
     padding: String;
+    wrap: "nowrap" | "wrap" | "wrap-reverse";
   }
   

@@ -30,7 +30,7 @@ import handleReducer from "../Common";
   );
   
 
-  const mazeSlice = createSlice({
+  const mazeSlice  = createSlice({
     name: "search",
     initialState,
     reducers: {

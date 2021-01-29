@@ -26,6 +26,9 @@ const Container = styled.View<Partial<IView>>`
    ${({ padding }) => padding && `
     padding: ${padding}px;
   `}
+    ${({ wrap }) => wrap && `
+    flex-wrap: ${wrap};
+  `}
   `;
 
 

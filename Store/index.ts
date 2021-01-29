@@ -1,10 +1,8 @@
 import { configureStore,ThunkAction, getDefaultMiddleware, combineReducers } from "@reduxjs/toolkit";
 import {mazeReducer} from './Slice/Maze';
 
-
-
   const rootReducer = combineReducers({
-    maze : mazeReducer,
+    film : mazeReducer,
   });
 
   export const store = configureStore({
