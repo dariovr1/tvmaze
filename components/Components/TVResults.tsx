@@ -1,6 +1,6 @@
 import { css } from '@emotion/native';
 import React, { SyntheticEvent, useEffect, useState } from 'react';
-import { Text } from 'react-native';
+import { FlatList, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { Result } from '../../model/Search/tvmaze';
 import { RootState } from '../../Store';
@@ -13,11 +13,16 @@ const TVResults = () => {
 
   return(
     <Container direction="row" alignitems="center" wrap="wrap">
-        {
-           series.length > 0 && series.map((single) => <SeriesItem series={single} />)
-        }
+         <FlatList
+            data={series}
+            renderItem={({item}) => <SeriesItem series={item} />}
+            keyExtractor={(item, index) => item.show.id.toString()}
+            numColumns={3}
+            style={{ flex: 1 }}
+            contentContainerStyle={{ paddingVertical: 20 }}
+          />
     </Container>    
-  )
+   )
 }
 
 export default TVResults;
